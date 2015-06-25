@@ -21,7 +21,7 @@
 #include <linux/ioctl.h>
 #include <linux/color_enhancement.h>
 
-#define LOG_TAG "CMHW"
+#define LOG_TAG "MKHW"
 #include <cutils/log.h>
 
 #define CE_DEVICE "/dev/color_enhancement"
@@ -70,7 +70,7 @@ static int getMode()
 extern "C" {
 #endif
 
-JNIEXPORT jint JNICALL Java_org_cyanogenmod_hardware_ColorEnhancement_native_1getCELevel(
+JNIEXPORT jint JNICALL Java_org_mokee_hardware_ColorEnhancement_native_1getCELevel(
         JNIEnv* env, jclass thiz)
 {
     int level = 0;
@@ -86,7 +86,7 @@ JNIEXPORT jint JNICALL Java_org_cyanogenmod_hardware_ColorEnhancement_native_1ge
     return (jint)level;
 }
 
-JNIEXPORT jint JNICALL Java_org_cyanogenmod_hardware_ColorEnhancement_native_1setCELevel(
+JNIEXPORT jint JNICALL Java_org_mokee_hardware_ColorEnhancement_native_1setCELevel(
         JNIEnv* env, jclass thiz, jint value)
 {
     int level = int(value);
