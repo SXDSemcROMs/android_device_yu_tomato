@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.hardware;
+package org.mokee.hardware;
 
 import java.io.File;
 
@@ -30,7 +30,7 @@ public class ColorEnhancement {
     private static final int CE_DEFAULT = 3;
 
     static {
-        System.loadLibrary("jni_cmhw");
+        System.loadLibrary("jni_mkhw");
     }
 
     private static native int native_getCELevel();
